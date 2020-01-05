@@ -35,26 +35,36 @@ body {
   background-color: #060610eb;
 }
 
-.input-form {
+.upload-btn-wrapper {
+  z-index: 100;
   position: relative;
-  width: 400px;
-  height: 200px;
-  background-color: #17975beb;
-  border-radius: 5px;
+  overflow: hidden;
+  display: inline-block;
+  transition: background 0.2s ease-in, color 0.2s ease-in;
+}
+.upload-btn-wrapper:hover .btn {
+  background: #f3f3f3;
+  color: #0ea44d;
 }
 
-#drop_zone {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#drop_zone p {
-  font-family: "Roboto", sans-serif;
-  color: #0f0f0d;
-  font-size: 20px;
-  text-transform: uppercase;
+.btn {
+  border: none;
+  color: #f3f3f3;
+  background: #0ea44d;
+  padding: 3rem 4rem;
+  border-radius: 8px;
+  font-size: 2.5rem;
   font-weight: bold;
+  transition: background 0.2s ease-in, color 0.2s ease-in;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 10rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=/main.3d6386d6.css.map */
