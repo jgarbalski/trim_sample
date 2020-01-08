@@ -4,5 +4,14 @@
   },
   "dependencies": {
     "parcel-bundler": "^1.12.4"
-  }
+  },
+  "name": "sample_trim",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
