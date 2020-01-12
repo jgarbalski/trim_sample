@@ -2,6 +2,7 @@ import os
 
 from flask import Flask, render_template, request
 from flask_dropzone import Dropzone
+from sassutils.wsgi import SassMiddleware
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
