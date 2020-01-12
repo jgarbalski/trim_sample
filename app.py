@@ -2,7 +2,6 @@ import os
 
 from flask import Flask, render_template, request
 from flask_dropzone import Dropzone
-from sassutils.wsgi import SassMiddleware
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
@@ -23,12 +22,23 @@ dropzone = Dropzone(app)
 
 @app.route('/', methods=['POST', 'GET'])
 def upload():
+    music_type = request.form.get("type")
+
     if request.method == 'POST':
-        for key, f in request.files.items():
-            if key.startswith('file'):
-                f.save(os.path.join(app.config['UPLOADED_PATH'], f.filename))
+        print(music_type)
+        
+        # for key, f in request.files.items():
+        #     if key.startswith('file'):
+        #         f.save(os.path.join(app.config['UPLOADED_PATH'], f.filename))
     return render_template('index.html')
 
+
+# @app.route('/register', methods=['GET', 'POST'])
+# def register():
+#     music_type = request.form.get("audio-type")
+
+#     if request.method == "POST":
+#         print(music_type)
 
 if __name__ == '__main__':
     app.run(debug=True)

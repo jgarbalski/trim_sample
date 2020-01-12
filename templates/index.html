@@ -26,13 +26,38 @@
           </header>
 
           <div class="hero">
-            <h1>SAMPLEtrim</h1>
-            <!-- <form action="" method="post" enctype="multipart/form-data">
-                <input type="file" name="file" />
-              </form> -->
-            <h2>Split your mp3 <br> song into pieces</h2>
 
-            <form action="/file-upload" required
+            <div class="title">
+              <h1>SAMPLEtrim</h1>
+              <!-- <form action="" method="post" enctype="multipart/form-data">
+                  <input type="file" name="file" />
+                </form> -->
+              <h2>Split your mp3 <br> song into pieces</h2>
+
+            </div>
+          
+
+            <!-- {{ dropzone.create('/') }} -->
+            
+            <form action = "/" method = "POST" 
+            enctype = "multipart/form-data">
+    
+        
+            <input type="file" name="file" id="file" class="inputfile" required  multiple/>
+<label for="file"><p>Upload file</p></label>
+
+            <select
+            name="type" required>
+                <option value="vocals">Vocals</option>
+                <option value="instrumental">Instrumental</option>
+                <option value="vocals-drums">Vocals & Drums</option>
+                <option value="drums">Drums</option>
+            </select>
+
+            <input type = "submit" required/>
+         </form>
+
+            <!-- <form action="/file-upload" required
             class="dropzone"
             id="my-awesome-dropzone">
             <div class="dz-message" data-dz-message><span>Drop files here or click to upload</span></div>
@@ -44,18 +69,18 @@
                 <option value="drum">Drums</option>
             </select>
             <button id="upload-file">Upload</button>
-          </form>
+          </form> -->
 
       
 
-        {{ dropzone.create('/') }}
+        <!-- {{ dropzone.create('/') }}
         <select name="type">
             <option value="vocals">Vocals</option>
             <option value="instrumental">Instrumental</option>
             <option value="vocals-drums">Vocals & Drums</option>
             <option value="drum">Drums</option>
           </select>
-        <button id="upload">Upload</button>
+        <button id="upload">Upload</button> -->
         </div>
 
         <footer>  

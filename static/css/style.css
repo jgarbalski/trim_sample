@@ -67,6 +67,42 @@ header h2 {
   -webkit-text-fill-color: transparent;
 }
 
+.inputfile {
+  height: 10rem;
+  width: 35rem;
+  opacity: 0;
+  z-index: 999;
+  overflow: hidden;
+  position: absolute;
+}
+
+.inputfile + label {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  background-color: #0ea44d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10rem;
+  width: 35rem;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+  background-color: #298e53;
+}
+
+.inputfile + label {
+  cursor: pointer;
+  /* "hand" cursor */
+}
+
+.inputfile:focus + label {
+  outline: 1px dotted #000;
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
 .hero {
   position: relative;
   height: 80vh;
@@ -79,9 +115,13 @@ header h2 {
   background-color: #232323;
 }
 
-.hero h1 {
+.hero .title h1 {
   font-size: 5rem;
   color: white;
+}
+
+.hero .title h2 {
+  color: #efefef;
 }
 
 footer {
