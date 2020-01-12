@@ -39,9 +39,13 @@
 
             <!-- {{ dropzone.create('/') }} -->
             
-            <form action = "/" method = "POST" 
+            <form action = "{{ url_for('upload')}}" method = "POST" 
             enctype = "multipart/form-data">
-    
+            
+            <div class="successMsg" id="successMsg">
+              File uploaded
+              <button id="">idzie dalej</button>
+            </div>
         
             <input type="file" name="file" id="file" class="inputfile" required  multiple/>
 <label for="file"><p>Upload file</p></label>
@@ -53,7 +57,7 @@
                 <option value="vocals-drums">Vocals & Drums</option>
                 <option value="drums">Drums</option>
             </select>
-
+            
             <input type = "submit" required/>
          </form>
 
