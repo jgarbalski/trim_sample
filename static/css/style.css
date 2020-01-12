@@ -67,6 +67,12 @@ header h2 {
   -webkit-text-fill-color: transparent;
 }
 
+#successMsg {
+  color: #0ea44d;
+  font-size: 3rem;
+  display: none;
+}
+
 .inputfile {
   height: 10rem;
   width: 35rem;

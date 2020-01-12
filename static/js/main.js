@@ -20,7 +20,45 @@ $(document).ready(function(){
     $('form input').change(function () {
       $('form p').text(this.files.length + " file(s) selected");
     });
+
+    $('form').on('submit', function(event) {
+        event.preventDefault();
+
+        var formData = new FormData($('form')[0]);
+
+        $.ajax({
+
+            xhr : function() {
+				var xhr = new window.XMLHttpRequest();
+
+				xhr.upload.addEventListener('progress', function(e) {
+
+					if (e.lengthComputable) {
+						console.log('Bytes Loaded: ' + e.loaded);
+						console.log('Total Size: ' + e.total);
+						console.log('Percentage Uploaded: ' + (e.loaded / e.total))
+					}
+				});
+                return xhr;
+            },
+
+
+            type : 'POST',
+            url : '/',
+            data : formData,
+            processData : false,
+            contentType : false,
+            success : function() {
+                // alert('File uploaded!');
+                document.getElementById("successMsg").style.display="block";
+            }
+        })
+    })
   });
+
+
+
+
 
 
 // $("#upload-file").submit(function (event) {
