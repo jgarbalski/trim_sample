@@ -32,6 +32,42 @@ $(document).ready(function(){
         })
     });
 
+
+    $("#test-btn").click(function (event) { 
+        
+
+        $.ajax({
+            type : 'POST',
+            url : '/spleeter',
+            data : '',
+            processData : false,
+            contentType : false,
+            success : function() {
+                // alert('File uploaded!');
+                $('form p').text("Drag file(s) or click to upload");
+            }
+        })
+        return 'OK'; });
+
+
+
+
+    // $('#form-split').on('submit', function(event) {
+    //     event.preventDefault();
+
+    //     $.ajax({
+    //         type : 'POST',
+    //         url : '/',
+    //         data : text,
+    //         processData : false,
+    //         contentType : false,
+    //         success : function() {
+    //             // alert('File uploaded!');
+    //             console.log("mleko")
+    //         }
+    //     })
+    // });
+
     
     // $('#submit-btn').on('submit',function (event) {
     //     $.getJSON('/',
@@ -43,13 +79,23 @@ $(document).ready(function(){
 
     
 
-    $("#test-btn").click(function (event) { 
-        $.getJSON('/spleeter',
-            function(data) { 
-                print("mleko")
-            });
-        return 'OK'; });
+    // $("#test-btn").click(function (event) { 
+    //     $.getJSON('/spleeter',
+    //         function(data) { 
+    //             $('form p').text('mleko');
+    //         });
+    //     return 'OK'; });
+
+
+
+
+
+
+   
+
 })
+
+
 
 
 

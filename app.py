@@ -46,14 +46,14 @@ def upload():
 
 
 
-@app.route('/spleeter')
+@app.route('/spleeter',  methods=['POST', 'GET'])
 def run_spleeter():
     print("IDZIE DALEJ")
     print(spleeter_command)
     return spleeter_command
 
 
-@app.route('/submit')
+@app.route('/submit', methods=['POST', 'GET'])
 def submit_file():
     print("wysyla plik")
     
