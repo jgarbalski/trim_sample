@@ -51,6 +51,13 @@ def run_spleeter():
     print("IDZIE DALEJ")
     print(spleeter_command)
     return spleeter_command
+
+
+@app.route('/submit')
+def submit_file():
+    print("wysyla plik")
+    
+    
     
     
 

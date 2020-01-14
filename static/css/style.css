@@ -98,7 +98,7 @@ header h2 {
 }
 
 .hero .form-box {
-  background-image: linear-gradient(to right bottom, #0eb66f, #11b16d, #13ab6b, #16a669, #18a167);
+  background: #17B978;
   padding: 2rem;
   border-radius: 5px;
   height: 35rem;
@@ -115,9 +115,9 @@ header h2 {
 }
 
 .hero .form-box #form-send select {
-  background-color: #9fecbf;
+  background-color: #efefef;
   height: 4rem;
-  width: 65%;
+  width: 50%;
   font-size: 2rem;
   font-family: 'Dosis', sans-serif;
   text-align-last: center;
@@ -131,19 +131,31 @@ header h2 {
 
 .hero .form-box #form-send #submit-btn {
   display: block;
+  width: 20rem;
   padding: 1rem 4rem;
-  border: 0 none;
+  border: none;
   cursor: pointer;
-  border-radius: 5px;
-  background-image: linear-gradient(to right top, #29cd5a, #3fd76a, #51e079, #61ea89, #71f398);
+  border-radius: 50px;
+  background: #62fccd;
   box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in;
 }
 
-.hero .form-box #form-send #submit-btn p {
+.hero .form-box #form-send #submit-btn:hover {
+  background: white;
+  color: black;
+}
+
+.hero .form-box #form-send #submit-btn:hover::before {
+  font-size: 2.2rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+}
+
+.hero .form-box #form-send #submit-btn span {
   font-family: 'Quicksand', sans-serif;
   font-weight: 600;
   font-size: 2.2rem;
-  color: white;
 }
 
 .hero .form-box .select-options {
@@ -155,12 +167,24 @@ header h2 {
 }
 
 #test-btn {
+  font-size: 2.2rem;
+  font-size: 2.2rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  display: block;
+  width: 20rem;
   padding: 1rem 4rem;
-  background: #b50e72;
-  border: 0 none;
+  border: none;
   cursor: pointer;
-  border-radius: 5px;
-  font-size: 2rem;
+  border-radius: 50px;
+  background: #0d0d0d;
+  color: white;
+  transition: all 0.2s ease-in;
+}
+
+#test-btn:hover {
+  background: white;
+  color: black;
 }
 
 #successMsg {
@@ -179,30 +203,30 @@ header h2 {
 }
 
 .inputfile:hover + #mleko {
-  background: #086931;
+  background: #fdfdfd;
+}
+
+label {
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
 }
 
 label p {
+  color: black;
   text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.25);
 }
 
 .inputfile + label {
-  font-size: 2.4rem;
-  font-weight: 700;
+  font-size: 2.5rem;
+  font-weight: 500;
   color: white;
-  background-color: #40AD8C;
-  border: 2px dashed white;
+  background-color: #A7FF83;
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 20rem;
   width: 90%;
   transition: background 0.15s ease-in;
-}
-
-.inputfile:focus + label,
-.inputfile + label:hover {
-  background-color: #298e53;
 }
 
 .inputfile + label {
@@ -231,5 +255,5 @@ footer a svg {
 }
 
 footer a svg:hover {
-  fill: #efefef;
+  fill: #17B978;
 }

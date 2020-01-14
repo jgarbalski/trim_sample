@@ -1,19 +1,3 @@
-// $(function() {
-//     $('#upload-file').click(function() {
-//         var form_data = new FormData($('#upload-file')[0]);
-//         $.ajax({
-//             type: 'POST',
-//             url: '/uploadajax',
-//             data: form_data,
-//             contentType: false,
-//             cache: false,
-//             processData: false,
-//             success: function(data) {
-//                 console.log('Success!');
-//             },
-//         });
-//     });
-// });
 
 
 
@@ -41,12 +25,23 @@ $(document).ready(function(){
             contentType : false,
             success : function() {
                 // alert('File uploaded!');
+                console.log(formData)
                 document.getElementById("successMsg").style.display="block";
                 document.getElementById("submit-btn").style.display="none";
             }
         })
     });
 
+    
+    // $('#submit-btn').on('submit',function (event) {
+    //     $.getJSON('/',
+    //         function(data) {
+    //             console.log('dziadzia')
+    //         });
+    //     return 'OK';
+    // })
+
+    
 
     $("#test-btn").click(function (event) { 
         $.getJSON('/spleeter',
@@ -55,28 +50,6 @@ $(document).ready(function(){
             });
         return 'OK'; });
 })
-
-
-//     $('#form-forward').on('submit', function(event) {
-//         event.preventDefault();
-
-//         var formData1 = new FormData($('#form-forward')[0]);
-
-//         $.ajax({
-//             type : 'POST',
-//             url: "/spleeter",
-//             data : formData1,
-//             processData : false,
-//             contentType : false,
-//             success: function(result){
-//                 console.log(result);
-//             }
-            
-//             });
-//       });
-//   });
-
-  
 
 
 

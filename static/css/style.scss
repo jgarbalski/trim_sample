@@ -118,7 +118,7 @@ body {
     }
 
     .form-box {
-        background-image: linear-gradient(to right bottom, #0eb66f, #11b16d, #13ab6b, #16a669, #18a167);
+        background: #17B978;
         padding: 2rem;
         border-radius: 5px;
         height: 35rem;
@@ -133,9 +133,9 @@ body {
             align-items: center;
 
             & select {
-                background-color: rgb(159, 236, 191);
+                background-color: rgb(239, 239, 239);
                 height: 4rem;
-                width: 65%;
+                width: 50%;
                 font-size: 2rem;
                 font-family: 'Dosis', sans-serif;
                 text-align-last: center;
@@ -151,25 +151,40 @@ body {
 
             & #submit-btn {
                 display: block;
-                padding:1rem 4rem; 
-                border:0 none;
-                cursor:pointer;
-                border-radius: 5px; 
+                width: 20rem;
+                padding: 1rem 4rem;
+                border: none;
+                cursor: pointer;
+                border-radius: 50px;
+                background: #62fccd;
+                // background-image: linear-gradient(to right top, #29cd5a, #3fd76a, #51e079, #61ea89, #71f398);
+                box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.25);
+                transition: all 0.2s ease-in;
+
+                &:hover {
+                    background: white;
+                    color: black;
+                }
 
                 
-                background-image: linear-gradient(to right top, #29cd5a, #3fd76a, #51e079, #61ea89, #71f398);
-                box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.25);
 
-    & p {
-        font-family: 'Quicksand', sans-serif;
-        font-weight: 600;
-        font-size: 2.2rem;
-        color: white;
-       
-    }
+                &:hover::before {                    
+                    font-size: 2.2rem;
+                    font-family: 'Quicksand', sans-serif;
+                    font-weight: 600;
+                }
+
+
+
+                & span {
+                    font-family: 'Quicksand', sans-serif;
+                    font-weight: 600;
+                    font-size: 2.2rem;
+
+                }
 
             }
-        }
+            }
 
         & .select-options {
             width: 100%;
@@ -188,12 +203,28 @@ body {
 
 
 #test-btn {
-    padding:1rem 4rem; 
-    background:rgb(181, 14, 114); 
-    border:0 none;
-    cursor:pointer;
-    border-radius: 5px; 
-    font-size: 2rem;
+
+    font-size: 2.2rem;
+
+    font-size: 2.2rem;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    display: block;
+    width: 20rem;
+    padding: 1rem 4rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    background: #0d0d0d;
+    color: white;
+    // background-image: linear-gradient(to right top, #29cd5a, #3fd76a, #51e079, #61ea89, #71f398);
+    // box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s ease-in;
+
+    &:hover {
+        background: white;
+        color: black;
+    }
 
 }
 
@@ -215,25 +246,28 @@ body {
     
     &:hover + #mleko {
         
-        background: #086931;
+        background: #fdfdfd;
+
     }
 	
 }
 
 label {
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
     & p {
+        color: black;
         text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.25);
     }
 }
 
 
 .inputfile + label {
-    font-size: 2.4rem;
-    font-weight: 700;
+    font-size: 2.5rem;
+    font-weight: 500;
     color: white;
-    background-color: #40AD8C;
-    border: 2px dashed white;
-    
+    background-color: #A7FF83;
+    // border: 2px dashed white;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -245,11 +279,11 @@ label {
     
 }
 
-.inputfile:focus + label,
-.inputfile + label:hover {
-    background-color: #298e53;
+// .inputfile:focus + label,
+// .inputfile + label:hover {
+//     background-color: #b52dac;
     
-}
+// }
 
 .inputfile + label {
 	cursor: pointer; /* "hand" cursor */
@@ -287,7 +321,7 @@ outline: none;
             transition: fill 0.15s ease-in;
 
             &:hover {
-                fill: #efefef;
+                fill: #17B978;
             }
             
           }
