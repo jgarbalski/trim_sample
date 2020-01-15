@@ -23,7 +23,8 @@ spleeter_command = ""
 @app.route('/', methods=['POST', 'GET'])
 def upload():
     music_type = request.form.get("type")
-
+    
+    
 
     def stems(x):
         return {
@@ -49,7 +50,6 @@ def upload():
 @app.route('/spleeter',  methods=['POST', 'GET'])
 def run_spleeter():
     print("IDZIE DALEJ")
-    print(spleeter_command)
     return spleeter_command
 
 
