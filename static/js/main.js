@@ -28,6 +28,7 @@ $(document).ready(function(){
                 console.log(formData)
                 document.getElementById("successMsg").style.display="block";
                 document.getElementById("submit-btn").style.display="none";
+                $('#select-song').attr('disabled', 'disabled');
             }
         })
     });
@@ -44,9 +45,15 @@ $(document).ready(function(){
             contentType : false,
             success : function() {
                 // alert('File uploaded!');
+                document.getElementById("form-send").reset();
                 $('form p').text("Drag file(s) or click to upload");
+                $('#select-song').removeAttr('disabled');
+                document.getElementById("submit-btn").style.display="block";
+                document.getElementById("successMsg").style.display="none";                
+
             }
         })
+        
         return 'OK'; });
 
 
