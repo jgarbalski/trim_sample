@@ -49,7 +49,8 @@ $(document).ready(function(){
                 $('form p').text("Drag file(s) or click to upload");
                 $('#select-song').removeAttr('disabled');
                 document.getElementById("submit-btn").style.display="block";
-                document.getElementById("successMsg").style.display="none";                
+                document.getElementById("successMsg").style.display="none";    
+                console.log("test")            
 
             }
         })
