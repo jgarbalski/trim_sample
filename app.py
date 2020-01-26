@@ -21,6 +21,11 @@ spleeter_command = ""
 
 
 @app.route('/', methods=['POST', 'GET'])
+def main():
+    return render_template('index.html')
+
+
+@app.route('/upload', methods=['POST', 'GET'])
 def upload():
 
     music_type = request.form.get('type')
@@ -33,16 +38,14 @@ def upload():
             'drums': "5stems",
         }[x]
 
-    if request.method == 'POST':
-        for key, f in request.files.items():
-            if key.startswith('file'):
-                f.save(os.path.join(app.config['UPLOADED_PATH'], f.filename))
-                global spleeter_command
-                spleeter_command = str("spleeter separate -i \"" + str(os.path.join(app.config['UPLOADED_PATH'], f.filename)) + "\" -o audio_output -p spleeter:" + stems(music_type) + "-16kHz")
-    return render_template('index.html')
+    for key, f in request.files.items():
+        if key.startswith('file'):
+            f.save(os.path.join(app.config['UPLOADED_PATH'], f.filename))
+            global spleeter_command
+            spleeter_command = str("spleeter separate -i \"" + str(os.path.join(app.config['UPLOADED_PATH'], f.filename)) + "\" -o audio_output -p spleeter:" + stems(music_type) + "-16kHz")
+    return ('dupa')
 
-
-@app.route('/spleeter')
+@app.route('/spleeter', methods=['POST', 'GET'])
 def run_spleeter():
     print(spleeter_command)
     return spleeter_command
