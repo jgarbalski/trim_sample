@@ -1,7 +1,6 @@
 import os
 
 from flask import Flask, render_template, request
-from flask_dropzone import Dropzone
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
@@ -17,7 +16,6 @@ app.config.update(
     DROPZONE_UPLOAD_ON_CLICK=True
 )
 
-dropzone = Dropzone(app)
 
 spleeter_command = ""
 
